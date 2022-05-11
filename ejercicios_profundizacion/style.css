@@ -66,3 +66,62 @@ body {
     rgb(104, 40, 90) 100%
   );
 }
+/* div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 10px;
+} */
+
+
+.padre {
+  display: grid;
+  grid-template: repeat(4, minmax(200px, 1fr)) / repeat(12, minmax(200px, 1fr));
+  grid-template-areas:
+    " x x x n n a a "
+    " x x x f f e e "
+    " x x x p p v v ";
+}
+
+.padre > div {
+  padding: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.normal {
+  grid-area: n;
+}
+.agua {
+  grid-area: a;
+}
+.fuego {
+  grid-area: f;
+}
+.electricidad {
+  grid-area: e;
+}
+.planta {
+  grid-area: p;
+}
+.veneno {
+  grid-area: v;
+}
+@media only screen and (max-width: 900px) {
+  .padre {
+    grid-template: repeat(auto-fit, minmax(10px, 1fr)) / 1fr;
+    grid-template-areas:
+      "n"
+      "a"
+      "f"
+      "e"
+      "p"
+      "v";
+  }
+}
