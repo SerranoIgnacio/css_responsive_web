@@ -70,11 +70,12 @@ body {
 .padre {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .padre > div {
   padding: 20px;
+  margin: 15px;
   text-align: center;
   border-radius: 20px;
   align-items: center;
